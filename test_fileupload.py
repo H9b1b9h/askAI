@@ -6,7 +6,7 @@ import streamlit as st
 
 
 def main():
-    load_dotenv()
+    #load_dotenv()
 
     # Load the OpenAI API key from the environment variable
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
