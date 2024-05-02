@@ -1,3 +1,4 @@
 openAI
 langchain
+langchain_experimental
 streamlit
