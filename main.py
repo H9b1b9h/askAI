@@ -1,4 +1,4 @@
-from langchain.agents import create_csv_agent
+from langchain_experimental.agents import create_csv_agent
 from langchain.llms import OpenAI
 from dotenv import load_dotenv
 import os
@@ -6,7 +6,11 @@ import streamlit as st
 
 
 def main():
-    load_dotenv()
+    #load_dotenv()
+
+    st.set_page_config(page_title="Ask your Data")
+    st.header("Ask your Data 📈")
+    os.environ["OPENAI_API_KEY"]  = st.text_input("Insert your Open AI API key: ")
 
     # Load the OpenAI API key from the environment variable
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
@@ -15,10 +19,9 @@ def main():
     else:
         print("OPENAI_API_KEY is set")
 
-    st.set_page_config(page_title="Ask your CSV")
-    st.header("Ask your CSV 📈")
-
     csv_file = st.file_uploader("Upload a CSV file", type="csv")
+
+    #csv_file = 'data.csv'
     if csv_file is not None:
 
         agent = create_csv_agent(
