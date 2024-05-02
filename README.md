@@ -34,3 +34,4 @@ streamlit run main.py
 This repository is intended for educational purposes only and is not designed to accept external contributions. It serves as supplemental material for the YouTube tutorial, demonstrating how to build the project.
 
 For any suggestions or improvements related to the tutorial content, please feel free to reach out through the YouTube channel's comment section.
+# askAI
